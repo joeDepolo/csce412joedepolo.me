@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('Kyle_field.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for overall layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidebar  */
+.sidebar {
+    width: 100%;
+    background-color: maroon;
+    color: white;
+    padding: 15px;
+    text-align: left; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex: 1; /* Take the remaining space */
+    padding: 0;
+    margin: 0;
+    line-height: 30px; /* Ensure items are vertically centered */
+}
+
+.sidebar ul li {
+    margin: 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: silver;
+    border-radius: 10px;
+}
+
+/* Toggle Switch to the right */
+.toggle-container {
+    margin-right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: rgb(226, 37, 37);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Adjust main content to start below the sidebar */
+.main-content {
+    margin-top: 100px; /* Increased margin to avoid overlap */
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+.header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    text-align: left; 
+    margin-bottom: 30px;
+    gap: 20px; 
+}
+
+
+.info-box {
+    flex: 1; 
+    text-align: left; 
+}
+.sub-info-box {
+    flex: 1; 
+    text-align: left; 
+}
+
+.headshot {
+    max-width: 200px; 
+    height: auto;
+    margin: 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+/* Header with Bubble-shaped Text */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.content-split {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+}
+.header h1 {
+    font-size: 2.5em;
+    color: maroon;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: grey;
+}
+
+
+
+/* Portfolio Section */
+.portfolio-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px; /* Makes the box bubble-shaped */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px; /* Fixed width for uniformity */
+    height: auto; /* Adjusts height automatically */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-section h2 {
+    margin-bottom: 15px;
+}
+
+.portfolio-section ul {
+    text-align: left;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.portfolio-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 50px;
+}
+
+/* Icon links */
+.icon-link {
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+.icon-link:hover {
+    transform: scale(1.1);
+}
+
+/* Service Section */
+.service-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px; /* Makes the box bubble-shaped */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px; /* Set a fixed width for uniformity */
+    height: auto; /* Adjust height based on content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-box h2 {
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    text-align: justify;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidebar ul {
+        flex-direction: column;
+    }
+    .main-content {
+        padding: 20px;
+    }
+}
