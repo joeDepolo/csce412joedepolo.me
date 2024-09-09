@@ -58,14 +58,14 @@ body {
 }
 
 .main-content {
-    margin-left: 220px; /* Ensures content is positioned to the right of the sidebar */
+    margin-left: 220px; /* Right align */
     padding: 40px;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Adds a light background to main content for readability */
+    background-color: rgba(255, 255, 255, 0.8); /*light box */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
@@ -274,7 +274,61 @@ body {
 .ai-logo:hover {
     transform: scale(1.1);
 }
+/*Toggle bar*/
+.toggle-container {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;    
+    transform: translateX(-50%); 
+}
+
+/* Toggle switch styling remains the same */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2144f3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
 /* Responsive Design */
+
 @media screen and (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -284,5 +338,10 @@ body {
     .main-content {
         margin-left: 0;
         padding: 20px;
+    }
+    .toggle-container {
+        bottom: 10px;
+        left: 50%; 
+        transform: translateX(-50%);
     }
 }
