@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* Container for overall layout */
+/* Container as seen before*/
 .container {
     display: flex;
     flex-direction: column;
@@ -39,10 +39,10 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    flex: 1; /* Take the remaining space */
+    flex: 1; 
     padding: 0;
     margin: 0;
-    line-height: 30px; /* Ensure items are vertically centered */
+    line-height: 30px; 
 }
 
 .sidebar ul li {
@@ -114,7 +114,7 @@ input:checked + .slider:before {
 
 /* Adjust main content to start below the sidebar */
 .main-content {
-    margin-top: 100px; /* Increased margin to avoid overlap */
+    margin-top: 100px; /* Bigger gap thing */
     padding: 40px;
     flex: 1;
     display: flex;
@@ -173,7 +173,13 @@ input:checked + .slider:before {
     color: grey;
 }
 
-
+.pdf-section, .story-section {
+    width: 48%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 /* Portfolio Section */
 .portfolio-section {
@@ -182,8 +188,8 @@ input:checked + .slider:before {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    width: 300px; /* Fixed width for uniformity */
-    height: auto; /* Adjusts height automatically */
+    width: 300px; 
+    height: auto; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -229,12 +235,12 @@ input:checked + .slider:before {
 
 .service-box {
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 50px; /* Makes the box bubble-shaped */
+    border-radius: 50px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    width: 300px; /* Set a fixed width for uniformity */
-    height: auto; /* Adjust height based on content */
+    width: 300px; 
+    height: auto; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
